@@ -9,12 +9,4 @@ addons:
     token:
       secure: 6ad459a4157f9e9ca2dccaa07671774e10c6fc71
 script:
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -P TRAVIS_BUILD
-
-deploy:
-  provider: heroku
-  api_key:
-    secure: c463c02d-86e7-45fa-ac34-30f3ba3c4eb9
-  app: astronom-designer
-  file: "/home/travis/build/AstronomVM/AstronomDesigner/target/AstronomDesigner-1.0-SNAPSHOT.jar"
-  skip_cleanup: true
+  - HEROKU_API_KEY="c463c02d-86e7-45fa-ac34-30f3ba3c4eb9" mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -P TRAVIS_BUILD
