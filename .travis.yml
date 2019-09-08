@@ -16,3 +16,5 @@ deploy:
   api_key:
     secure: c463c02d-86e7-45fa-ac34-30f3ba3c4eb9
   app: astronom-designer
+  file: "/home/travis/build/AstronomVM/AstronomDesigner/target/AstronomDesigner-1.0-SNAPSHOT.jar"
+  skip_cleanup: true
