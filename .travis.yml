@@ -3,7 +3,6 @@ language: java
 jdk:
   - openjdk9
 
-
 addons:
   sonarcloud:
     organization: "AstronomVM"
@@ -12,3 +11,8 @@ addons:
 script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -P TRAVIS_BUILD
   - sonar-scanner
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: c463c02d-86e7-45fa-ac34-30f3ba3c4eb9
